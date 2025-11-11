@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+  background: linear-gradient(135deg, #fbe5f0, #f3c5e0);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  color: #c278d3;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.step {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background: linear-gradient(to right, #b09de0, #f3b6d0);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.login-link a {
+  color: #90b4e8;
+  text-decoration: none;
+}
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}

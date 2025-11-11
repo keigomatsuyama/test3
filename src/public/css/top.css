@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  color: #c278d3;
+  font-size: 28px;
+}
+
+.actions button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  background-color: white;
+  margin: 0 10px;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.card span {
+  font-size: 16px;
+  color: #888;
+}
+
+.log {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="date"] {
+  padding: 6px;
+}
+
+.search-btn {
+  background-color: #888;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+}
+
+.add-btn {
+  background: linear-gradient(to right, #b09de0, #f3b6d0);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+thead {
+  border-bottom: 2px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+.edit-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination a {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #eee;
+  text-decoration: none;
+  color: #333;
+}
+
+.pagination .active {
+  background-color: #c278d3;
+  color: white;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  width: 400px;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #555;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+}
+
+.modal-content input, .modal-content textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+/* テーブル全体 */
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.log-table th,
+.log-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 検索バー */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 100%; /* ← 追加 */
+}
+
+.search-bar input[type="date"] {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.search-btn {
+  background-color: #666;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.reset-btn {
+  background-color: #fff;
+  color: #888;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.add-btn {
+  margin-left: auto; /* ← これで右端に寄せられます */
+  background: linear-gradient(to right, #b09de0, #f3b6d0);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.search-btn:hover,
+.reset-btn:hover {
+  opacity: 0.85;
+}
+/* ページネーション */
+/* ページネーション全体 */
+.pagination-wrapper nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ページ番号ボタン */
+.pagination-wrapper nav a,
+.pagination-wrapper nav span {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #444;
+  transition: 0.3s;
+  background: transparent;
+}
+
+/* ホバー */
+.pagination-wrapper nav a:hover {
+  background: #eee;
+}
+
+/* 現在ページ */
+.pagination-wrapper nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pagination-wrapper nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination-wrapper nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  border-radius: 8px;
+  background: #eee;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pagination-wrapper nav li:hover {
+  background: #d5b3f7;
+}
+
+.pagination-wrapper nav li.active,
+.pagination-wrapper nav li[aria-current='page'] {
+  background: linear-gradient(to right, #c471f5, #fa71cd);
+  color: #fff;
+}
+.hidden-toggle {
+    appearance: none;
+  position: absolute;
+  left: -9999px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.hidden-toggle:checked + .modal {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.modal-content h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modal-content textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.required {
+  color: white;
+  background: #e74c3c;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cancel {
+  background-color: #e0e0e0;
+  border: none;
+}
+
+.submit {
+  background: linear-gradient(to right, #d8b4fe, #fbcfe8);
+  border: none;
+  color: white;
+}
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+}

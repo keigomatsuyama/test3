@@ -1,0 +1,112 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  color: #333;
+}
+
+/* ===== ヘッダー ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 30px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 28px;
+  color: #d59ed8;
+  font-weight: 700;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #f5f5f5;
+}
+
+/* ===== メインカード ===== */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.setting-card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 320px;
+}
+
+.setting-card h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.setting-card input[type="number"] {
+  width: 120px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: right;
+  margin-right: 6px;
+}
+
+/* ===== ボタン ===== */
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back {
+  background: #e5e5e5;
+  padding: 8px 25px;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update {
+  background: linear-gradient(90deg, #b97dd3, #ff9dcf);
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.update:hover {
+  opacity: 0.9;
+}
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 0.25rem;
+}
