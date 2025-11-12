@@ -23,14 +23,20 @@ class LoginRequest extends FortifyLoginRequest
      *
      * @return array
      */
-    public function rules()
-    {
-        return [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email'],
-            'password' => ['required', 'string'],
-        ];
+   public function rules()
+{
+    $rules = [
+        'email' => ['required', 'email'],
+        'password' => ['required', 'string'],
+    ];
+
+    // "name" がリクエストに含まれていればバリデーション
+    if ($this->has('name')) {
+        $rules['name'] = ['required', 'string', 'max:255'];
     }
+
+    return $rules;
+}
     public function messages()
     {
         return [

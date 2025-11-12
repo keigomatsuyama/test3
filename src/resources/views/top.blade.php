@@ -44,7 +44,7 @@
         〜
         <input type="date" name="to" id="end-date" value="{{ request('to') }}">
         <button type="submit" class="search-btn">検索</button> <button type="button" class="reset-btn" onclick="window.location.href='/weight_logs'">リセット</button>
-        <label for="modal-toggle" class="add-btn">データ追加</label>
+        <label for="modal-toggle" class="add-btn">データ追加1</label>
       </form>
       <!-- モーダル開閉トリガー -->
       <input type="checkbox" id="modal-toggle" class="hidden-toggle" {{ $errors->any() ? 'checked' : '' }}>
